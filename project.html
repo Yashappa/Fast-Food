@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fast Food</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+    background: #f8f4df;
+    color: #292832;
+    font-family: Georgia;
+    margin: 0;
+}
+
+.page {
+    display: none;
+    padding: 20px;
+    padding-bottom: 80px;
+    min-height: 100vh;
+}
+
+body:not(:has(.page:target)) #start,
+.page:target {
+    display: block;
+}
+
+h1 {
+    text-align: center;
+}
+
+input {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 20px;
+    background: #78817e;
+    color: white;
+}
+
+input::placeholder {
+    color: white;
+}
+
+.btn {
+    display: block;
+    background: #292832;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    margin: 15px auto;
+    border-radius: 25px;
+    text-decoration: none;
+    width: 80%;
+}
+
+img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.food {
+    width: 100%;
+    height: 120px;
+}
+
+.card {
+    background: white;
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #e9e3d2;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #292832;
+    font-weight: bold;
+}
+</style>
+</head>
+<body>
+<section id="start" class="page">
+<img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=700">
+<h1>Fast Food</h1>
+<p style="text-align:center">Delicious food at your doorstep.</p>
+<a href="#signin" class="btn">Get Started</a>
+<p style="text-align:center">Don't have an account?
+<a href="#signup">Sign Up</a></p>
+</section>
+<section id="signin" class="page">
+<h1>Sign In</h1>
+<input type="email" placeholder="Enter Email">
+<input type="password" placeholder="Enter Password">
+<a href="#home" class="btn">Sign In</a>
+<p>Don't have an account?
+<a href="#signup">Sign Up</a></p>
+</section>
+<section id="signup" class="page">
+<h1>Sign Up</h1>
+<input placeholder="Enter Name">
+<input type="email" placeholder="Enter Email">
+<input type="password" placeholder="Enter Password">
+<a href="#home" class="btn">Create Account</a>
+</section>
+<section id="home" class="page">
+<h2>Hello!</h2>
+<p>Welcome back</p>
+<input placeholder="Search Food">
+<h2>Exclusive Offers</h2>
+<img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=700">
+<h2>Categories</h2>
+<div class="row">
+<a href="#burgers" class="card">
+<img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=400">
+<p>Burgers</p>
+</a>
+<a href="#pizza" class="card">
+<img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=400">
+<p>Pizza</p>
+</a>
+<a href="#noodles" class="card">
+<img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400">
+<p>Noodles</p>
+</a>
+<a href="#pasta" class="card">
+<img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=400">
+<p>Pasta</p>
+</a>
+</div>
+</section>
+<section id="menu" class="page">
+<h1>Our Menu</h1>
+<a href="#burgers" class="btn">Burgers</a>
+<a href="#pizza" class="btn">Pizza</a>
+<a href="#noodles" class="btn">Noodles</a>
+<a href="#pasta" class="btn">Pasta</a>
+</section>
+<section id="cart" class="page">
+<h1>My Cart</h1>
+<h3 style="text-align:center;margin-top:100px">
+Your Cart is Empty
+</h3>
+<a href="#menu" class="btn">Explore Menu</a>
+</section>
+<section id="profile" class="page">
+<h1>My Profile</h1>
+<img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=700">
+<input placeholder="Enter Name">
+<input placeholder="Enter Email">
+<input placeholder="Phone Number">
+<input placeholder="Address">
+<a href="#home" class="btn">Save Changes</a>
+</section>
+<section id="burgers" class="page">
+<h1>Burgers</h1>
+<div class="row">
+<div class="card">
+<img class="food" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400">
+<p>Classic Burger - Rs.120</p>
+</div>
+<div class="card">
+<img class="food" src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=400">
+<p>Cheese Burger - Rs.150</p>
+</div>
+<div class="card">
+<img class="food" src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400">
+<p>Double Burger - Rs.180</p>
+</div>
+<div class="card">
+<img class="food" src="https://images.unsplash.com/photo-1520072959219-c595dc870360?w=400">
+<p>Veg Burger - Rs.100</p>
+</div>
+</div>
+</section>
+<section id="pizza" class="page">
+<h1>Pizza</h1>
+<div class="row">
+<div class="card">
+<img class="food" src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400">
+<p>Cheese Pizza - Rs.180</p>
+</div>
+<div class="card">
+<img class="food" src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=400">
+<p>Margherita - Rs.150</p>
+</div>
+<div class="card">
+<img class="food" src="https://images.unsplash.com/photo-1579751626657-72bc17010498?w=400">
+<p>Farmhouse - Rs.220</p>
+</div>
+<div class="card">
+<img class="food" src="https://images.unsplash.com/photo-1604382355076-af4b0eb60143?w=400">
+<p>Veg Pizza - Rs.190</p>
+</div>
+</div>
+</section>
+<section id="noodles" class="page">
+<h1>Noodles</h1>
+<div class="row">
+<div class="card">
+<img class="food" src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400">
+<p>Veg Noodles - Rs.100</p>
+</div>
+<div class="card">
+<img class="food" src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=400">
+<p>Hakka Noodles - Rs.120</p>
+</div>
+<div class="card">
+<img class="food" src="https://images.unsplash.com/photo-1555126634-323283e090fa?w=400">
+<p>Spicy Noodles - Rs.140</p>
+</div>
+<div class="card">
+<img class="food" src="https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?w=400">
+<p>Garlic Noodles - Rs.150</p>
+</div>
+</div>
+</section>
+<section id="pasta" class="page">
+<h1>Pasta</h1>
+<div class="row">
+<div class="card">
+<img class="food" src="C:\Users\Yash\Downloads\pasta.jpg">
+<p>Italian Pasta - Rs.160</p>
+</div>
+<div class="card">
+<img class="food" src="C:\Users\Yash\OneDrive\Desktop\CWSproject\RED sauce.jpg">
+<p>Red Sauce Pasta - Rs.140</p>
+</div>
+<div class="card">
+<img class="food" src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=400">
+<p>Spicy Pasta - Rs.150</p>
+</div>
+<div class="card">
+<img class="food" src="C:\Users\Yash\OneDrive\Desktop\CWSproject\White Sauce.jpg">
+<p>White Sauce Pasta - Rs.170</p>
+</div>
+</div>
+</section>
+<div class="nav">
+<a href="#home">Home</a>
+<a href="#menu">Menu</a>
+<a href="#cart">Cart</a>
+<a href="#profile">Profile</a>
+</div>
+</body>
+</html>
